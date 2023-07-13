@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
+import { registerRoute } from './register-route';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,5 +10,5 @@ const router = createRouter({
     }
   ]
 })
-
-export default router
+registerRoute(router);
+export default router;
