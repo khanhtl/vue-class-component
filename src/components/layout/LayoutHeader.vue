@@ -4,6 +4,7 @@
       <h1 class="logo">
         <router-link to="/">Super store</router-link>
       </h1>
+      <router-link to="/products">Product</router-link>
       <router-link to="/cart">Cart</router-link>
     </div>
   </header>

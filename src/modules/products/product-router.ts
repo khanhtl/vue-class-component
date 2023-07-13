@@ -1,18 +1,15 @@
-const ProductModule = () => import("./product-module.vue");
-import ProductList from './views/product-list.vue'
-import ProductDetail from './views/product-detail.vue'
 const route = {
   path: "/products",
-  component: ProductModule,
   children: [
     {
       path: "",
-      component: ProductList
+      name: 'products',
+      component: () => import('./views/product-list.vue')
     },
-
     {
       path: ":id",
-      component: () => import("./views/product-detail.vue")
+      name: "product",
+      component: () => import('./views/product-detail.vue')
     }
   ]
 };
